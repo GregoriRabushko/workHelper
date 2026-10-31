@@ -11,6 +11,7 @@ from kivy.uix.scrollview import ScrollView
 from kivy.uix.textinput import TextInput
 from kivy.uix.widget import Widget
 
+__version__ = "0.1.0"
 
 # =========================================================
 # ОБЩИЙ ФОН ПРИЛОЖЕНИЯ
