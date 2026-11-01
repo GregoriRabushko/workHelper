@@ -27,7 +27,7 @@ source.include_exts = py,png,jpg,kv,atlas
 #source.exclude_exts = spec
 
 # (list) List of directory to exclude (leave empty to not exclude anything)
-#source.exclude_dirs = tests, bin, venv
+source.exclude_dirs = venv,.venv-build,.buildozer,p4a-recipes,__pycache__,bin
 
 # (list) List of exclusions using pattern matching
 # Do not prefix with './'
@@ -42,7 +42,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy
+requirements = python3,kivy,filetype
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -109,7 +109,7 @@ fullscreen = 0
 #android.features = android.hardware.usb.host
 
 # (int) Target Android API, should be as high as possible.
-#android.api = 33
+#android.api = 36
 
 # (int) Minimum API your APK / AAB will support.
 #android.minapi = 24
@@ -118,7 +118,7 @@ fullscreen = 0
 #android.sdk = 20
 
 # (str) Android NDK version to use
-#android.ndk = 23b
+#android.ndk = 23c
 
 # (int) Android NDK API to use. This is the minimum API your app will support, it should usually match android.minapi.
 #android.ndk_api = 21
@@ -291,7 +291,7 @@ fullscreen = 0
 
 # (list) The Android archs to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
 # In past, was `android.arch` as we weren't supporting builds for multiple archs at the same time.
-android.archs = arm64-v8a, armeabi-v7a
+android.archs = arm64-v8a
 
 # (int) overrides automatic versionCode computation (used in build.gradle)
 # this is not the same as app version and should only be edited if you know what you're doing
@@ -344,7 +344,7 @@ android.allow_backup = True
 #p4a.source_dir =
 
 # (str) The directory in which python-for-android should look for your own build recipes (if any)
-#p4a.local_recipes =
+p4a.local_recipes = p4a-recipes
 
 # (str) Filename to the hook for p4a
 #p4a.hook =
